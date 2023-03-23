@@ -9,6 +9,21 @@ document.getElementById("myButton").onclick = function(){
     document.getElementById("p1").innerHTML = "Hello " + username;
 }*/
 
+let password;
+let cpassword;
+
+let botao = document.getElementById("mybytton");
+ botao.addEventListener("click", function(event){
+    event.preventDefault();
+    cpassword = document.getElementById("cpassword").value;
+    password = document.getElementById("password").value;
+    if(password != cpassword){
+        document.getElementById("message").innerHTML = "Senhas não correspondem " ;
+        console.log("errrror");
+    }
+    
+});
+
 //Showing something with html id (must be unique)
 //document.getElementById("p1").innerHTML = "Hello " + firstName;
 
@@ -105,4 +120,14 @@ document.getElementById("confirm").onclick = function(){
 /*Comparators
  == compare the value
  === compare the value and the type
+*/
+
+/* map function to arrays
+
+let numbers = [1,2,3,4];
+let squares = numbers.map(square)
+
+function square(element){
+    return Math.pow(element,2)
+}
 */
